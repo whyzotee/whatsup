@@ -1,9 +1,7 @@
 name: whatsup
 description: "Hello from now time"
-version: 0.0.1
-authors:
-  - zenlektomyum@gmail.com
-homepage:
+version: 1.0.0
+homepage: https://github.com/whyzotee/whatsup
 
 environment:
   sdk: ">=3.2.6 <4.0.0"
