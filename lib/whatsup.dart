@@ -24,4 +24,20 @@ class Whatsup {
         return hw();
     }
   }
+
+  static String nameOfDay() {
+    final day = dateTime().weekday;
+
+    List days = [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ];
+
+    return days[day];
+  }
 }
