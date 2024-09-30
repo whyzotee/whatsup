@@ -1,33 +1,30 @@
 library whatsup;
 
 class Whatsup {
-  static String morning() => "Good morning";
-  static String afternoon() => "Good afternoon";
-  static String evening() => "Good evening";
-  static String night() => "Good night";
-  static String hw() => "Hello World!";
-  static DateTime dateTime() => DateTime.now();
+  final DateTime _dt = DateTime.now();
 
-  static String now({int? hour}) {
-    final now = dateTime();
+  final String _morning = "Morning";
+  final String _afternoon = "Afternoon";
+  final String _evening = "Evening";
+  final String _night = "Night";
+  final String hw = "Hello World!";
 
-    switch (hour ?? now.hour) {
+  String now({int? hour, bool good = true}) {
+    switch (hour ?? _dt.hour) {
       case >= 5 && < 12:
-        return morning();
+        return good ? "Good$_morning" : _morning;
       case >= 12 && < 18:
-        return afternoon();
+        return good ? "Good$_afternoon" : _afternoon;
       case >= 18 && < 22:
-        return evening();
+        return good ? "Good$_evening" : _evening;
       case >= 22 || < 4:
-        return night();
+        return good ? "Good$_night" : _night;
       default:
-        return hw();
+        return hw;
     }
   }
 
-  static String nameOfDay() {
-    final day = dateTime().weekday;
-
+  String nameOfDay({int? day}) {
     List days = [
       "Monday",
       "Tuesday",
@@ -38,6 +35,25 @@ class Whatsup {
       "Sunday"
     ];
 
-    return days[day];
+    return days[day ?? (_dt.weekday - 1)];
+  }
+
+  String nameOfMonth({int? month}) {
+    List months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+
+    return months[month ?? (_dt.month - 1)];
   }
 }
