@@ -12,13 +12,13 @@ class Whatsup {
   String now({int? hour, bool good = true}) {
     switch (hour ?? _dt.hour) {
       case >= 5 && < 12:
-        return good ? "Good$_morning" : _morning;
+        return good ? "Good $_morning" : _morning;
       case >= 12 && < 18:
-        return good ? "Good$_afternoon" : _afternoon;
+        return good ? "Good $_afternoon" : _afternoon;
       case >= 18 && < 22:
-        return good ? "Good$_evening" : _evening;
+        return good ? "Good $_evening" : _evening;
       case >= 22 || < 4:
-        return good ? "Good$_night" : _night;
+        return good ? "Good $_night" : _night;
       default:
         return hw;
     }
