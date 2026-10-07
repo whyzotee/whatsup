@@ -1,6 +1,6 @@
 name: whatsup
 description: 'A lightweight package to return time-based greetings like "Good morning" or "Good afternoon" from a given datetime.'
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/whyzotee/whatsup
 
 environment:

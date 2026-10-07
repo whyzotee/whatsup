@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Added a runnable example in `example/whatsup.dart` showing greetings and day and month names.
+
 ## 1.0.4
 
 ### Breaking changes
