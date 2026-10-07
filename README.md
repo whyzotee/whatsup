@@ -1,31 +1,45 @@
+# What's up
+
+A lightweight package to return time-based greetings like "Good morning" or "Good afternoon" from a given datetime.
+
 ## Features
 
-TODO: Simply to hello from time by call function Whatsup.now()
+- 🌅 Greeting messages based on the hour (Morning, Afternoon, Evening, Night)
+- 📅 Convert day numbers to day names
+- ⚡ Lightweight and easy to integrate into Flutter apps
+
+## Installation
+
+```yaml
+dependencies:
+  whatsup: ^latest_version
+```
 
 ## Usage
 
-TODO: Import package to dart file 'package:whatsup/whatsup.dart';
+Import the package into your Dart file:
 
 ```dart
-import 'package:whatsup/whatsup.dart'; // <--- import package
 import 'package:flutter/material.dart';
+import 'package:whatsup/whatsup.dart';
 
 void main() {
-  runApp(const MainApp());
+  // Get greeting based on specific hour
+  print(Whatsup.now(hour: 5));  // "Good morning"
+
+  // Get greeting without prefix
+  print(Whatsup.now(hour: 12, prefix: false)); // "Afternoon"
+
+  // Get day name (1 = Monday, 7 = Sunday)
+  print(Whatsup.nameOfDay(day: 1)); // "Monday"
+
+  // Get month name (1 = January, 12 = December)
+  print(Whatsup.nameOfMonth(month: 1)); // "January"
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text(Whatsup.now()),// <--- Call now function then return good time text like moning, afternoom
-        ),
-      ),
-    );
-  }
+// Example usage in Flutter Widget
+Widget buildGreeting() {
+  // Returns greeting message based on current device time
+  return Text(Whatsup.now());
 }
 ```
