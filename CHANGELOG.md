@@ -1,3 +1,12 @@
+## [1.0.6] - 2026-10-11
+
+### 📚 Documentation
+
+- docs: update changelog for v1.0.6
+
+### 💼 Other
+
+- Remove Flutter SDK dependency
 ## [1.0.5] - 2026-10-07
 
 ### 📚 Documentation
