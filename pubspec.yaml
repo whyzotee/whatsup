@@ -1,17 +1,11 @@
 name: whatsup
 description: 'A lightweight package to return time-based greetings like "Good morning" or "Good afternoon" from a given datetime.'
-version: 1.0.5
+version: 1.0.6
 homepage: https://github.com/whyzotee/whatsup
 
 environment:
   sdk: ^3.13.5
-  flutter: ">=1.17.0"
-
-dependencies:
-  flutter:
-    sdk: flutter
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^6.0.0
+  lints: ^6.0.0
+  test: ^1.33.0
